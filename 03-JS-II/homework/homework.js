@@ -65,9 +65,9 @@ function esEntero(numero) {
   if (numero == 0) {
   	return true;
   } else if (numero <= -1 || numero >=1) {
-  	return !(numero%(Math.floor(numero)))
+  	return !(numero%(Math.floor(numero)));
 	} else {
-		return false
+		return false;
 	}
 }
 
@@ -77,13 +77,13 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
   if (!(numero%3) && !(numero%5)) {
-  	return "fizzbuzz"
+  	return "fizzbuzz";
   } else if (!(numero%3)) {
   	return "fizz";
   } else if (!(numero%5)) {	
-  	return "buzz"
+  	return "buzz";
   } else {
-  	return numero
+  	return numero;
   }
 }
 
@@ -102,7 +102,7 @@ function esPrimo(numero) {
                     primo = true;
             }
         }
-	return primo        
+	return primo;     
 }
 
 
