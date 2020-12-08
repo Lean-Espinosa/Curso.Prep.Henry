@@ -55,38 +55,59 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
   var frase = ""
-  for (var i = 0; i < palabras.length; i++){
-  	if (i < (palabras.length - 1)) {
-  		var frase = frase + palabras[i]	+ " "
-  	} else if (i = (palabras.length - 1)) {
-  		var frase = frase + palabras[i];
+  palabras.forEach(function (item) {
+  	if (item == palabras[palabras.length -1]) {
+  		frase = frase + item;
+  	} else {
+  		frase = frase + (item + " ");
   	}
-  }
-  return frase
+  })
+  return frase;
 }
-
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  var contains = false;
+  array.forEach(function (item) {
+  	if (item == elemento) {
+  		contains = true;
+  	}
+  })
+  return contains;
 }
 
 function agregarNumeros(numeros) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  let acumm = 0;
+  numeros.forEach(function(item){
+  	acumm = acumm + item;
+  })
+  return acumm;
 }
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  let avg = 0;
+  resultadosTest.forEach(function(item){
+  	avg = avg + item;
+  })
+  return (avg / resultadosTest.length);
 }
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  let max = 0;
+  numeros.forEach(function(num){
+  	max = Math.max(max,num);
+  })
+  return max;
 }
 
 function multiplicarArgumentos() {
@@ -94,6 +115,15 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0
   // Si se pasa un argumento, simplemente devuélvelo
   // Tu código:
+  let prod = 1;
+  if (arguments.length == 0) {
+  	prod = 0;
+  } else {
+  	for (var i = arguments.length - 1; i >= 0; i--) {
+  	 prod = prod * arguments[i];
+  	}
+  }
+  return prod;
 }
 
 // No modificar nada debajo de esta línea
